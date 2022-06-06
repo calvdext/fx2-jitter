@@ -11,6 +11,8 @@ import About from './About'
 import NotFound from './NotFound'
 import { reducer } from '../utils/reducer'
 import { StateContext } from '../utils/stateContext'
+//import axios  from 'axios'
+//import { Typography } from '@mui/material';
 
 const App = () => {
   //useReducer handles all the state in the same object
@@ -49,8 +51,18 @@ const App = () => {
 
   useEffect(
     ()=>{
-      //fetch
-      //setMessageList(initialMessageList)
+      // fetch("http://http://localhost:4000/messages")
+      // .then(response => response.json())
+      // .then(data => console.log(data))
+      // axios.get("http://localhost:4000/messages")
+      // .then(response => {
+      //   console.log(response.data)
+      //   dispatch({
+      //     type: "setMessageList",
+      //     data: response.data
+      //   })
+      // })
+      // setMessageList(initialMessageList)
       dispatch({
         type: "setMessageList",
         data: initialMessageList
@@ -62,7 +74,6 @@ const App = () => {
 
   return (
     <div >
-          <h1>Jitter</h1>
           
           {/*{ !loggedInUser ?
             <LoginForm activateUser={activateUser}/>
